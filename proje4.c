@@ -61,6 +61,11 @@ int main() {
     char ay[3]; // Kullanýcýdan alýnacak ay bilgisi (örneðin: "01" Ocak için)
     printf("Lutfen faturasi hesaplanacak ay numarasini girin (01-12): ");
     scanf("%s", ay);
+    if(ay>12){
+    	printf("Girilen deger hatali.");
+    	
+	}else{
+
 
     // Dosyadaki verileri iþle ve faturayý yaz
     hesaplaVeYaz(ay, adslFile, faturaFile);
@@ -71,5 +76,6 @@ int main() {
 
     printf("Fatura %s ayi icin fatura.txt dosyasina yazildi.\n", ay);
     return 0;
+    	}
 }
 
